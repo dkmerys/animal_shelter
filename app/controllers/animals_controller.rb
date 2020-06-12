@@ -1,11 +1,7 @@
 class AnimalsController < ApplicationController
 
   def index
-    if params[:name].present?
-      @animals = Animal.search_by_name(params[:name])
-    else
-      @animals = Animal.all
-    end
+    @animals = Animal.all
     json_response(@animals)    
   end
 
@@ -38,7 +34,9 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    @animals = Animal.search_by_name(params[:name])
+    if params[:name].present?
+      @animals = Animal.search_by_name(params[:name])
+    end
     json_response(@animals)
   end
 
