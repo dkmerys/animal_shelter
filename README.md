@@ -18,7 +18,7 @@ There are 2 ways to view this application
 
 or
 
-1. Navigate to https://pacific-falls-22293.herokuapp.com/ and use Postman to make API calls
+1. Navigate to https://epicodus-animal-shelter.herokuapp.com/animals and use Postman to make API calls
 
 ## Known Bugs
 - Search function will return any result that matches any entered parameter
