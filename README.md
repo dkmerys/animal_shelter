@@ -1,12 +1,12 @@
-# _Mario's Speciality Foods_
+# _Animal Shelter API_
 
-#### _An application that will allow users to add products and reviews for a speciality food retailer._
+#### _A bare-bones example of a Ruby on Rails application providing a REST API to a database-backed model._
 
 #### By _**Daniel Merys**_
 
 ## Description
 
-_This repository has the logic and spec files for the Mario's Speciality Foods application, which will allow users to input their products, edit/delete those product as well as add multiple reviews of those products in a one-to-many relationship._
+_This API, for a fictional animal shelter, allows users to GET, POST, PUT, DELETE objects to the database. There is, as of yet, no UI application._
 
 ## Setup/Installation Requirements
 
@@ -14,40 +14,37 @@ There are 2 ways to view this application
 
 1. Clone this repository to your machine
 2. In the terminal, run `rails s` from the root directory
-3. Navigate to localhost:3000 in your browser
+3. Use Postman to make API calls from the URL http://localhost:3000/animals/
 
-To test admin functionality, sign in using the following credentials:
-email: dan@marios.com
-password: password
+or
+
+1. Navigate to https://pacific-falls-22293.herokuapp.com/ and use Postman to make API calls
 
 ## Known Bugs
-
+- Search function will return any result that matches any entered parameter
 
  
 ## Support and contact details
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/dkmerys/marios_food_products/issues) here on GitHub._
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/dkmerys/animal_shelter/issues) here on GitHub._
 
 ## Technologies Used
 
 
 Git and GitHub,
 Ruby on Rails,
-Ruby Gems (Faker, FactoryBot)
+Ruby Gems (Faker, FactoryBot, Rack-Throttle)
+Postman
 
 
 ### Specs
-| Spec                                                                         |
-|------------------------------------------------------------------------------|
-| Will create a new Product object                                             |
-| Will save a Product object                                                   |
-| Will allow user to update a Product object                                   |
-| Will allow user to delete a Product object                                   |
-| Will create a new Review object and associate it with a Product object       |
-| Will save a Review object                                                 |
-| Will allow user to update a Review object                                 |
-| Will allow user to delete a Review object                                 |
-| User can carry out actions via interface on web-hosted site or using rails server (instructions outlined in Setup/Installation Requirements, above) |
+| Endpoints |                                         Description                                         |
+|:---------:|:-------------------------------------------------------------------------------------------:|
+| GET       | User can enter a numerical ID and will receive the JSON object with that ID                 |
+| POST      | User can enter parameters and add an object to the database (ID is automatically assigned   |
+| PUT       | User can edit an object attribute                                                           |
+| DELETE    | User can delete an object                                                                   |
+| SEARCH    | User can enter parameters and all objects matching any of those parameters will be returned |
 
 ### License
 
