@@ -1,8 +1,12 @@
 class AnimalsController < ApplicationController
 
   def index
-    @animals = Animal.all
-    json_response(@animals)
+    if params[:name].present?
+      @animals = Animal.search_by_name(params[:name])
+    else
+      @animals = Animal.all
+    end
+    json_response(@animals)    
   end
 
   def show
@@ -19,7 +23,7 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     if @animal.update(animal_params)
       render status: 200, json: {
-        message: "This animal has been updated successfully."
+        message: "This animal record has been updated successfully."
       }
     end
   end
@@ -31,6 +35,11 @@ class AnimalsController < ApplicationController
         message: "This animal record has been successfully deleted."
       }
     end
+  end
+
+  def search
+    @animals = Animal.search_by_name(params[:name])
+    json_response(@animals)
   end
 
   private
