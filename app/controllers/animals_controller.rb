@@ -34,9 +34,7 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    if params[:name].present?
-      @animals = Animal.search_by_name(params[:name])
-    end
+    @animals = Animal.search(params[:name], params[:breed], params[:gender], params[:age])
     json_response(@animals)
   end
 

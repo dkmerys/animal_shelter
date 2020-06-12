@@ -4,5 +4,16 @@ class Animal < ApplicationRecord
   validates :breed, presence: true
   validates :gender, presence: true
 
-  scope :search_by_name, -> (name) { where('name ilike ?', name) }
+
+  scope :search, -> (name, breed, gender, age) do 
+    where(
+      'name ilike ?', name
+    ).or(
+      where('breed ilike ?', breed)
+    ).or(
+      where('gender ilike ?', gender)
+    ).or(
+      where('age ilike ?', age)
+    )
+  end
 end
