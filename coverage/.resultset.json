@@ -358,9 +358,9 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
+          2,
+          2,
+          2,
           null,
           null,
           null,
@@ -385,7 +385,7 @@
           1,
           null,
           1,
-          6,
+          8,
           null,
           null
         ]
@@ -471,7 +471,7 @@
           null
         ]
       },
-      "/Users/Dan/Desktop/epicodus-projects/animal_shelter/spec/requests/post_animals_spec.rb": {
+      "/Users/Dan/Desktop/epicodus-projects/animal_shelter/spec/requests/post_animal_spec.rb": {
         "lines": [
           1,
           null,
@@ -506,8 +506,29 @@
           null,
           null
         ]
+      },
+      "/Users/Dan/Desktop/epicodus-projects/animal_shelter/spec/requests/put_animal_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1591995289
+    "timestamp": 1591995723
   }
 }
