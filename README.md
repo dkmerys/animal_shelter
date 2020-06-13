@@ -38,13 +38,14 @@ Postman
 
 
 ### Specs
-| Endpoints |                                         Description                                         |
+| Endpoints |                                        Specification                                        |
 |:---------:|:-------------------------------------------------------------------------------------------:|
 | GET       | User can enter a numerical ID and will receive the JSON object with that ID                 |
 | POST      | User can enter parameters and add an object to the database (ID is automatically assigned   |
 | PUT       | User can edit an object attribute                                                           |
 | DELETE    | User can delete an object                                                                   |
 | SEARCH    | User can enter parameters and all objects matching any of those parameters will be returned |
+|           | API is limited to 2000 calls per day                                                        |
 
 ### License
 
