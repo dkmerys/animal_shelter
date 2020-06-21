@@ -38,14 +38,21 @@ Postman
 
 
 ### Specs
-| Endpoints |                                        Specification                                        |
-|:---------:|:-------------------------------------------------------------------------------------------:|
-| GET       | User can enter a numerical ID and will receive the JSON object with that ID                 |
-| POST      | User can enter parameters and add an object to the database (ID is automatically assigned   |
-| PUT       | User can edit an object attribute                                                           |
-| DELETE    | User can delete an object                                                                   |
-| SEARCH    | User can enter parameters and all objects matching any of those parameters will be returned |
-|           | API is limited to 2000 calls per day                                                        |
+|              Action             |                                              Endpoint                                              |
+|:-------------------------------:|:--------------------------------------------------------------------------------------------------:|
+| GET a list of all animals       | localhost:3000/animals                                                                             |
+| GET a list of animals, by name  | localhost:3000/animals?name=[search_params]                                                        |
+| GET a list of animals, by age   | localhost:3000/animals?age=[search_params]                                                         |
+| GET a list of animals, by breed | localhost:3000/animals?breed=[search_params]                                                       |
+| GET a list of animals, by age   | localhost:3000/animals?gender=[search_params]                                                      |
+| POST a new animal               | localhost:3000/animals?breed=[breed_param]&age=[age_param]&gender=[gender_param]&name=[name_param] |
+| PATCH/PUT an animal's breed     | localhost:3000/animals?breed=[new_breed]                                                           |
+| PATCH/PUT an animal's age       | localhost:3000/animals?age=[new_age]                                                               |
+| PATCH/PUT an animal's gender    | localhost:3000/animals?gender=[new_gender]                                                         |
+| PATCH/PUT an animal's quote     | localhost:3000/animals?quote=[new_quote]                                                           |
+| DELETE an animal record         | localhost:300/animal?id=[id_param]                                                                 |
+| SEARCH                          | User can enter parameters and all objects matching any of those parameters will be returned        |
+|                                 | API is limited to 2000 calls per day       
 
 ### License
 
